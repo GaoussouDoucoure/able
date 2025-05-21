@@ -1,5 +1,5 @@
 //The -able suffix.
-// recycable - recycle()
+// recyclable - recycle()
 // edible - eat()
 // flippable - flip()
 
