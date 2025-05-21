@@ -1,15 +1,41 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+//The -able suffix.
+// recycable - recycle()
+// edible - eat()
+// flippable - flip()
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+//todo items are DoAble
+interface IDoable{
+    public void done();
+}
+
+interface IFlappable{
+    public void flap();
+}
+
+class Task implements IDoable, IFlappable {
+
+    @Override
+    public void done() {
+        System.out.println("Its marked as complete!!!");
+    }
+
+    @Override
+    public void flap() {
+        System.out.println("Whoosh whoosh!!!");
+    }
+}
+
+class BigTask extends Task{
+    public void done() {
+        System.out.println("Its marked as complete!!! Whooo!!!");
+    }
+}
+
+class Main{
+
+    public static void main(String[] args) {
+        BigTask t = new BigTask();
+        t.done();
+        t.flap();
     }
 }
